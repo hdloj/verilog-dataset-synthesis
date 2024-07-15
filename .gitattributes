@@ -5,3 +5,4 @@ data/mg-verilog.jsonl filter=lfs diff=lfs merge=lfs -text
 data/formatted.jsonl filter=lfs diff=lfs merge=lfs -text
 data/modules.jsonl filter=lfs diff=lfs merge=lfs -text
 data/filtered.jsonl filter=lfs diff=lfs merge=lfs -text
+data/descriptions.jsonl filter=lfs diff=lfs merge=lfs -text
