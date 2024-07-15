@@ -1,0 +1,6 @@
+[submodule "ip-cores"]
+	path = ip-cores
+	url = https://github.com/fabriziotappero/ip-cores.git
+[submodule "index-librorum-prohibitorum"]
+	path = index-librorum-prohibitorum
+	url = https://github.com/AussieSeaweed/index-librorum-prohibitorum.git

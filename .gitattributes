@@ -1,0 +1,4 @@
+data/concatenated.jsonl filter=lfs diff=lfs merge=lfs -text
+data/index-librorum-prohibitorum.jsonl filter=lfs diff=lfs merge=lfs -text
+data/ip-cores.jsonl filter=lfs diff=lfs merge=lfs -text
+data/mg-verilog.jsonl filter=lfs diff=lfs merge=lfs -text
