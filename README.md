@@ -41,7 +41,7 @@ cat data/modules.jsonl | python filter.py 200 > data/filtered.jsonl
 Generate module descriptions. Set the maximum number of workers depending on the OpenAI account usage tier.
 
 ```console
-cat data/filtered.jsonl | python describe.py gpt-3.5-turbo 100 > data/descriptions.jsonl
+cat data/filtered.jsonl | python describe.py [model] [max-worker-count] > data/descriptions.jsonl
 ```
 
 Separate module declarations and implementations.
@@ -60,4 +60,13 @@ Create a minified version of the fine-tuning dataset.
 
 ```console
 cat data/openai.jsonl | python minify.py > data/openai-minified.jsonl
+```
+
+Solve VerilogEval problems.
+
+```console
+cat data/verilog-eval-machine.jsonl | python verilog-eval-openai.py [model] [max-worker-count] [k] > data/solutions-machine.jsonl
+cat data/verilog-eval-machine.jsonl | python verilog-eval-openai.py [minified-model] [max-worker-count] [k] > data/solutions-machine-minified.jsonl
+cat data/verilog-eval-human.jsonl | python verilog-eval-openai.py [model] [max-worker-count] [k] > data/solutions-human.jsonl
+cat data/verilog-eval-human.jsonl | python verilog-eval-openai.py [minified-model] [max-worker-count] [k] > data/solutions-human-minified.jsonl
 ```
