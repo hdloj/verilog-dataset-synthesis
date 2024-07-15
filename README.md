@@ -43,3 +43,9 @@ Generate module descriptions. Set the maximum number of workers depending on the
 ```console
 cat data/filtered.jsonl | python describe.py gpt-3.5-turbo 100 > data/descriptions.jsonl
 ```
+
+Separate module declarations and implementations.
+
+```console
+cat data/descriptions.jsonl | python separate.py > data/separated.jsonl
+```
