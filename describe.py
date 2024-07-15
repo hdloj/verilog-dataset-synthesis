@@ -5,9 +5,9 @@ from functools import partial
 from sys import stdin, stdout
 
 from dotenv import load_dotenv
+from jsonlines import Reader, Writer
 from openai import OpenAI
 from tqdm import tqdm
-import jsonlines as jsonl
 
 SYSTEM_PROMPT = (
     'Explain the high-level functionality of the Verilog module. Use as many'
@@ -75,7 +75,7 @@ def main():
     args = parse_args()
     client = OpenAI()
 
-    with jsonl.Reader(stdin) as reader:
+    with Reader(stdin) as reader:
         modules = tuple(reader)
 
     with ThreadPoolExecutor(args.max_worker_count) as executor:
@@ -93,7 +93,7 @@ def main():
             {'module': module, 'description': description},
         )
 
-    with jsonl.Writer(stdout) as writer:
+    with Writer(stdout) as writer:
         writer.write_all(module_descriptions)
 
 
