@@ -37,7 +37,7 @@ def main():
 
         assert m is not None
 
-        sources.append(m[0] + code)
+        sources.append(m.group() + code)
 
     with Writer(stdout) as writer:
         writer.write_all(sources)
