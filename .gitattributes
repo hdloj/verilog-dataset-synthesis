@@ -19,3 +19,7 @@ data/solutions-human.jsonl filter=lfs diff=lfs merge=lfs -text
 data/solutions-human-strict.jsonl filter=lfs diff=lfs merge=lfs -text
 data/solutions-human-strict-minified.jsonl filter=lfs diff=lfs merge=lfs -text
 data/solutions-machine.jsonl filter=lfs diff=lfs merge=lfs -text
+data/solutions-machine-gpt-4o.jsonl filter=lfs diff=lfs merge=lfs -text
+data/solutions-human-gpt-3.5-turbo.jsonl filter=lfs diff=lfs merge=lfs -text
+data/solutions-human-gpt-4o.jsonl filter=lfs diff=lfs merge=lfs -text
+data/solutions-machine-gpt-3.5-turbo.jsonl filter=lfs diff=lfs merge=lfs -text
