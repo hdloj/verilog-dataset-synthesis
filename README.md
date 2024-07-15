@@ -56,7 +56,7 @@ Create fine-tuning dataset for OpenAI.
 cat data/separated.jsonl | python fine-tuning-openai.py > data/openai.jsonl
 ```
 
-Create a minified version of the fine-tuning dataset.
+(Optionally) Create a minified version of the fine-tuning dataset.
 
 ```console
 cat data/openai.jsonl | python minify.py > data/openai-minified.jsonl
@@ -66,7 +66,5 @@ Solve VerilogEval problems.
 
 ```console
 cat data/verilog-eval-machine.jsonl | python verilog-eval-openai.py [model] [max-worker-count] [k] > data/solutions-machine.jsonl
-cat data/verilog-eval-machine.jsonl | python verilog-eval-openai.py [minified-model] [max-worker-count] [k] > data/solutions-machine-minified.jsonl
 cat data/verilog-eval-human.jsonl | python verilog-eval-openai.py [model] [max-worker-count] [k] > data/solutions-human.jsonl
-cat data/verilog-eval-human.jsonl | python verilog-eval-openai.py [minified-model] [max-worker-count] [k] > data/solutions-human-minified.jsonl
 ```
