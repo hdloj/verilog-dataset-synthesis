@@ -49,3 +49,9 @@ Separate module declarations and implementations.
 ```console
 cat data/descriptions.jsonl | python separate.py > data/separated.jsonl
 ```
+
+Create fine-tuning dataset for OpenAI.
+
+```console
+cat data/separated.jsonl | python fine-tuning-openai.py > data/openai.jsonl
+```
