@@ -55,3 +55,9 @@ Create fine-tuning dataset for OpenAI.
 ```console
 cat data/separated.jsonl | python fine-tuning-openai.py > data/openai.jsonl
 ```
+
+Create a minified version of the fine-tuning dataset.
+
+```console
+cat data/openai.jsonl | python minify.py > data/openai-minified.jsonl
+```
