@@ -68,3 +68,9 @@ Solve VerilogEval problems.
 cat data/verilog-eval-machine.jsonl | python verilog-eval-openai.py [model] [max-worker-count] [k] > data/solutions-machine.jsonl
 cat data/verilog-eval-human.jsonl | python verilog-eval-openai.py [model] [max-worker-count] [k] > data/solutions-human.jsonl
 ```
+
+Export dataset for fine-tuning.
+
+```console
+cat data/openai.jsonl | python export.py > exported.jsonl
+```
