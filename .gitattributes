@@ -37,3 +37,4 @@ data/exported-hdlbits-new.jsonl filter=lfs diff=lfs merge=lfs -text
 data/exported.jsonl filter=lfs diff=lfs merge=lfs -text
 data/exported-strict.jsonl filter=lfs diff=lfs merge=lfs -text
 data/phase-1.jsonl filter=lfs diff=lfs merge=lfs -text
+data/phase-2.jsonl filter=lfs diff=lfs merge=lfs -text
